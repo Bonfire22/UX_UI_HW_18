@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  font-family: 'Darker Grotesque', sans-serif;
 }
 header {
   background-color: #373738;
@@ -54,10 +54,82 @@ header p {
   font-size: 30px;
 }
 
-.flex-direction {
-  grid-row: auto;
+
+#heroGrid {
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-rows: 30% 30% 30%;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-areas:
+  "Architecture" "Experiential"
+  "UX";
+
 }
 
+.wrapper {
+  display: grid;
+}
+
+.wrapper {
+  border: 2px solid #EBD9D8;
+  border-radius: 5px;
+  background-color:#EBD9D8;
+}
+
+#categoryGrid {
+  grid-template-rows: 400px 400px 400px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "Architecture"
+    "Experiential"
+    "UX"
+  ;
+}
+
+#Architecture {
+  grid-area: Architecture;
+  background-image: "/images/palace1 from livingarea.png" ;
+}
+
+#Experiential {
+  grid-area: Experiential;
+  background-image: "/images/mca.png";
+}
+
+#UX {
+  grid-area: UX;
+  background-image: "/images/Moodboard-for-UX-UI-Casestudy-B-Gregory-–-Figma 1.png" ;
+}
+
+.heroGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'Architecture Architecture Architecture Architecture Architecture Architecture'
+    'Experiential Experiential Experiential Experiential Experiential Experiential '
+    'UX UX UX UX UX UX';
+  gap: 10px;
+  background-color: #EBD9D8;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
 
 button {
   padding: 15px;
@@ -78,4 +150,64 @@ footer ul {
 footer li {
   display: inline-block;
   padding: 0px 7px;
+}
+
+/* Typography CSS */
+
+h2 {
+  font-size: 60px;
+  margin: 0px 0px;
+  color:black;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0px 0px;
+  color: black;
+}
+
+h4 {
+  color: black;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+
+#headline p {
+  max-width: 350px;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0px 0px;
+  color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+  #navigation {
+    display: none;
+  }
+  .icons {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #headline {
+    position: static;
+    margin: 20px;
+  }
+
+  #flexcontainer {
+  width: 100%;
+  }
+
+  #categoryGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "Architecture"
+    "Experiential"
+    "UX"
+    ;
+  }
 }
